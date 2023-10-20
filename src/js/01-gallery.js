@@ -9,7 +9,7 @@ const options = {
   captionDelay: 0,
   loop: true
 };
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
   const gallery = new SimpleLightbox('.gallery a', options);
 
