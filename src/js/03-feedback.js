@@ -4,7 +4,11 @@ const feedbackForm = document.querySelector('.feedback-form');
 const emailInput = feedbackForm.querySelector('input[name="email"]');
 const messageTextarea = feedbackForm.querySelector('textarea[name="message"]');
 
-feedbackForm.addEventListener('input', throttle(function() {
+messageTextarea.addEventListener('input', throttle(function() {
+  saveFormState();
+}, 500));
+
+emailInput.addEventListener('input', throttle(function() {
   saveFormState();
 }, 500));
 
