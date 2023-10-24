@@ -20,12 +20,13 @@ feedbackForm.addEventListener('submit', function(event) {
 });
 
 function saveFormState() {
-  const formData = {
-    email: emailInput.value,
-    message: messageTextarea.value,
-  };
-  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-}
+    const formData = {
+      email: emailInput.value.trim(), 
+      message: messageTextarea.value.trim(),
+    };
+    localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+  }
+  
 
 function loadFormState() {
   const storedData = localStorage.getItem('feedback-form-state');
