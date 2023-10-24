@@ -21,8 +21,9 @@ feedbackForm.addEventListener('submit', function(event) {
 
 function saveFormState() {
     const formData = {
-      email: emailInput.value.trim(), 
-      message: messageTextarea.value.trim(),
+     email: emailInput.addEventListener('change', saveFormState),
+     message: messageTextarea.addEventListener('change', saveFormState),
+        
     };
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
   }
