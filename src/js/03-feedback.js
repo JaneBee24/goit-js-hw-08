@@ -1,9 +1,15 @@
+import { create } from "lodash";
+
 const feedbackForm = document.querySelector('.feedback-form');
 const emailInput = feedbackForm.querySelector('input[name="email"]');
 const messageTextarea = feedbackForm.querySelector('textarea[name="message"]');
 
 feedbackForm.addEventListener('input', function(event) {
-    
+    localStorage.sortBy('input');
+    if ('input' = storedData){
+        return formData.email;
+        return formData.message;
+    } null
     localStorage.setItem('feedback-form-state', JSON.stringify(formData))
 });
 
