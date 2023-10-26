@@ -3,7 +3,7 @@ const emailInput = feedbackForm.querySelector('input[name="email"]');
 const messageTextarea = feedbackForm.querySelector('textarea[name="message"]');
 
 feedbackForm.addEventListener('input', function(event) {
-    emailTarget
+    
     localStorage.setItem('feedback-form-state', JSON.stringify(formData))
 });
 
