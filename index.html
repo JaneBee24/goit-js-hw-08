@@ -5,42 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея зображень</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
 </head>
 <body>
-    <div class="gallery" id="gallery"></div>
-    <div class="modal hidden" id="modal">
-        <span class="close" id="close">&times;</span>
-        <img class="modal-content" id="modal-img">
-    </div>
-    <script src="./gallery.js" defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const gallery = document.getElementById("gallery");
-            const modal = document.getElementById("modal");
-            const modalImg = document.getElementById("modal-img");
-            const closeModal = document.getElementById("close");
-
-            const images = [
-                "img1.jpg", "img2.jpg", "img3.jpg", 
-                "img4.jpg", "img5.jpg", "img6.jpg", 
-                "img7.jpg", "img8.jpg", "img9.jpg"
-            ];
-
-            gallery.innerHTML = images.map(img => `
-                <img src="${img}" class="gallery-item" alt="Image">
-            `).join('');
-
-            document.querySelectorAll(".gallery-item").forEach(item => {
-                item.addEventListener("click", function() {
-                    modal.classList.remove("hidden");
-                    modalImg.src = this.src;
-                });
-            });
-
-            closeModal.addEventListener("click", function() {
-                modal.classList.add("hidden");
-            });
-        });
-    </script>
+    <ul class="gallery"></ul>
+    <script src="gallery.js"></script>
 </body>
 </html>
