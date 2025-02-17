@@ -34,9 +34,14 @@ body {
   cursor: pointer;
 }
 
-/* Изображение в модалке на весь экран */
+.basicLightbox {
+  background: rgba(0, 0, 0, 0.9);
+}
+
 .modal-image {
   width: 100vw;
   height: 100vh;
   object-fit: contain;
+  display: block;
+  margin: auto;
 }

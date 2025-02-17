@@ -70,9 +70,11 @@ galleryContainer.addEventListener('click', (event) => {
       <img src="${largeImageURL}" class="modal-image">
   `, {
       onShow: (instance) => {
+          document.body.style.overflow = 'hidden';
           document.addEventListener('keydown', closeOnEscape);
       },
       onClose: (instance) => {
+          document.body.style.overflow = 'auto';
           document.removeEventListener('keydown', closeOnEscape);
       }
   });
